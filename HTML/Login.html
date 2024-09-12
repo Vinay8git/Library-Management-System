@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <!-- CSS only -->
+    <style>
+        
+        body
+        {
+            font-family: Arial, Helvetica, sans-serif;
+        
+        }
+        td{
+            text-align: center;
+        }
+        input
+        {
+            border: 3px solid ;
+            height: 26px;
+            margin-left: 17px;
+            margin-top: 4px;
+        }
+        button{
+            border: 3px solid;
+        }
+        #btn
+        {
+            background-color: lightblue;
+            color: rgb(0, 0, 0);
+            cursor: pointer;
+            width: 80px;
+            height: 40px;
+            font-size: medium;
+            font-weight: 600;
+        }
+        #btn:hover
+        {
+            background-color: #333;
+            color: lightblue;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <table align="center">
+        <tr>
+            <th colspan="2"><h2>Login Form</h2> <br><br><br></th>
+        </tr>
+        <tr>
+            <th>Username:</th>
+            <th><input type="text" name="un" placeholder="Enter Username"></th>
+        
+        </tr>        
+        <tr>
+            <th>Password:</th>
+            <th><input type="password" name="pw" placeholder="Enter Password"></th>
+        </tr>
+        <tr>
+            <td><br><br><input id="btn" type="submit" value="Submit"></td>
+            <td><br><br><a href=""><button id="btn" type="reset">Reset</button></a></td>
+        </tr>
+    </table>
+</body>
+</html>

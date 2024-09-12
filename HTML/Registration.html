@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="registration.css">
+    <script src="ValRegistration.js"></script>
+</head>
+
+<body>
+    <form name="myForm" onsubmit="return formValidate()" method="post">
+        <table cellspacing="10" cellpadding="10" align="center">
+            <caption align="center"><b>REGISTRATION FORM</b></caption>
+            <tr>
+                <th>Username : </th>
+                <td><input type="text" name="un" placeholder="Enter Username"></td>
+            </tr>
+            <tr>
+                <th>Password : </th>
+                <td><input type="password" name="pw" placeholder="Enter Password"></td>
+            </tr>
+            <tr>
+                <th>E-Mail : </th>
+                <td><input type="email" name="em" id=""></td>
+            </tr>
+            <tr>
+                <th>Phone Number : </th>
+                <td><input type="text" name="Phone"></td>
+            </tr>
+            <tr>
+                <th>Sex : </th>
+                <td><input type="radio" name="gd">Male <input type="radio" name="gd">Female</td>
+            </tr>
+            <tr>
+                <th>Date Of Birth : </th>
+
+                <td>
+                    <input type="number" value="1" min="1" max="31">
+                    <select name="Month">
+                        <option>January</option>
+                        <option>February</option>
+                        <option value="">March</option>
+                        <option value="">April</option>
+                        <option value="">May</option>
+                        <option value="">June</option>
+                        <option value="">July</option>
+                        <option value="">August</option>
+                        <option value="">September</option>
+                        <option value="">October</option>
+                        <option value="">November</option>
+                        <option value="">December</option>
+                    </select>
+                    <select name="Year">
+                        <option value="">1999</option>
+                        <option>2000</option>
+                        <option>2001</option>
+                        <option value="">2002</option>
+                        <option value="">2003</option>
+                        <option value="">2004</option>
+                        <option value="">2005</option>
+                        <option value="">2006</option>
+                        <option value="">2007</option>
+                        <option value="">2008</option>
+                        <option value="">2009</option>
+                        <option value="">2010</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>Language : </th>
+                <td><input type="checkbox" name="cb">English <input type="checkbox" name="cb">Hindi <input
+                        type="checkbox" name="cb">French <input type="checkbox" name="cb">German <input type="checkbox"
+                        name="cb">Marathi
+                </td>
+            </tr>
+            <tr>
+                <th>Address : </th>
+                <td><textarea cols="25" rows="5">Enter</textarea></td>
+            </tr>
+            <tr>
+                <td rowspan="2" colspan="2">
+                  <button type="submit">Submit</button>
+                  <a href="">
+                    <button type="reset">Clear</button>
+                  </a>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script src="ValRegistration.js"></script>
+</body>
+
+</html>

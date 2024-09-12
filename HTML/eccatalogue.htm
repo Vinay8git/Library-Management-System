@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<head>
+   <title> Catalogue </title>
+   <style>
+      body {
+            background-color: rgb(26, 31, 41);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 10px;
+            margin: 10px;
+        }
+
+      .first #bookimg
+      {
+         width: 120px;
+         height: 130px; 
+         border-radius: 7px;
+         border-style: solid;
+      }
+      .first {
+         width: 150px;
+         margin: 10px;
+      }
+
+      .cart {
+         width: 150px;
+         height:40px;
+         margin: 0;
+         border: 2px solid #333;
+         border-radius: 8px;
+      }
+      table
+      {
+         border-collapse: collapse;
+         width: 100%;
+      }
+      th
+      {
+         text-align: center;
+         background-color: #242424;
+         color: white;
+         padding: 10px;
+         font-size: large;
+      }
+      td
+      {
+         background-image: linear-gradient(#8198a5, #98b8c5, #8198a5);
+         padding: 7px;
+         text-align: center;
+         height:  127px;
+         font-weight: 550;
+      }
+      button {
+            background-color: cornflowerblue;
+            border-radius: 4px;
+            padding: 7px;
+            border: none;
+            transition: background-color 0.3s ease;
+            align-self: center;
+        }
+
+        button:hover {
+            background-color: #2c4370;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+
+        .quantity-input {
+            background-color: rgb(149, 159, 179);
+            width: 50px;
+            text-align: center;
+            padding: 5px;
+            border: 1px solid #333;
+            border-radius: 4px;
+            margin: 10px;
+            align-self: center;
+        }
+   </style>
+</head>
+
+<body>
+   <form action="">
+      <table border="1" width="100%">
+         <tr>
+            <th class="first">Book</th>
+            <th colspan="3">Book Details </th>
+         </tr>
+         <tr>
+            <td class="first"> <img src="dgec.jpg" id="bookimg"> </td>
+            <td> Book: Digital Electronics<br> Author: R.P. Jain <br> Publication: Wiely</td>
+            <td>$25.5 &nbsp;&nbsp;&nbsp;</td>
+            <td>
+               <input type="number" class="quantity-input" value="1" min="1" max="10">
+               <button type="button" onclick="addToCart('Digital Electronics', 25.5)">
+                  <img src="addtc.png" alt="Add to cart" class="cart">
+               </button>
+            </td>
+             
+         </tr>
+         <tr>
+            <td class="first"> <img src="taoec.jpeg" id="bookimg" /></td>
+            <td> Book:The Art Of Electronics
+               <br> Author:Paul Horowitz <br>
+               Publication: McGraw Hills
+            </td>
+            <td> $57 &nbsp;&nbsp;&nbsp; </td>
+            <td>
+               <input type="number" class="quantity-input" value="1" min="1" max="10">
+               <button type="button" onclick="addToCart('The Art Of Electronics', 57)">
+                  <img src="addtc.png" alt="Add to cart" class="cart">
+               </button>
+            </td>
+             
+             
+         </tr>
+         <tr>
+            <td class="first"> <img src="pdsw.jpg" id="bookimg" /></td>
+            <td> Book:Pulse, Digital, and Switching Waveforms<br> Author:Jacob Millman <br>
+               Publication:Pearson</td>
+            <td> $65.5 &nbsp;&nbsp;&nbsp; </td>
+            <td>
+               <input type="number" class="quantity-input" value="1" min="1" max="10">
+               <button type="button" onclick="addToCart('Pulse, Digital And Switching Waveforms', 65.5)">
+                  <img src="addtc.png" alt="Add to cart" class="cart">
+               </button>
+            </td>
+         </tr>
+         <tr>
+            <td class="first"> <img src="ecdac.jpg" id="bookimg" /></td>
+            <td> Book:Electronic Devices and Circuits<br> Author: Louis Nashelsky <br>
+               Publication: Tata</td>
+            <td> $35 &nbsp;&nbsp;&nbsp; </td>
+            <td>
+               <input type="number" class="quantity-input" value="1" min="1" max="10">
+               <button type="button" onclick="addToCart('Electronic Devices And Circuits', 35)">
+                  <img src="addtc.png" alt="Add to cart" class="cart">
+               </button>
+            </td>
+             
+         </tr>
+      </table>
+   </form>
+<script src="cart.js"></script>
+
+<script>
+    // Function to add item to the cart
+    function addToCart(bookName, price) 
+    {
+      var quantityInput = document.querySelector(".quantity-input");
+      var quantity = parseInt(quantityInput.value);
+
+        // Get the existing cart items or create an empty array
+        var cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+         cartItems.push({
+            bookName: bookName,
+            quantity: quantity,
+            price: price
+         });
+      localStorage.setItem("cartItems", JSON.stringify(cartItems));
+      // localStorage.clear();
+    }
+</script>
+
+   
+</body>
+
+</html>

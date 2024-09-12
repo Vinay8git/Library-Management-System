@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <h1> LIBRARY CART </h1>
+    <table id="cartTable">
+        <tr>
+            <th>Book Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+        </tr>
+        <tr>
+          <td>No Item</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+      </tr>
+        <!-- Cart items will be dynamically added here using JavaScript -->
+    </table>
+    <br><br><br><br>
+    <div id="grandTotal"></div>
+    <button onclick="clearCart()" id="clear">Clear Cart</button>
+    <script src="cart.js"></script>
+</body>
+</html>

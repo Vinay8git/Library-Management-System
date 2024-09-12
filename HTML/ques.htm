@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionnaire</title>
+    <link rel="stylesheet" href="ques.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Questionnaire</h1>
+        <form id="questionForm">
+            <div class="question">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="question">
+                <label for="age">Your Age:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <div class="question">
+                <label>Favorite Color:</label>
+                <input type="radio" name="color" value="red">Red
+                <input type="radio" name="color" value="blue">Blue
+                <input type="radio" name="color" value="green">Green
+            </div>
+            <div class="question">
+                <label for="comment">Any Comments:</label>
+                <textarea id="comment" name="comment" rows="4"></textarea>
+            </div>
+            <button type="button" onclick="submitForm()">Submit</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="ques.js"></script>
+</body>
+</html>
